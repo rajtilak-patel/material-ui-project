@@ -24,6 +24,7 @@ const Search = styled("div")(({ theme }) => ({
   margin: "0 10px",
   padding: "0px 10px",
   width: "40%",
+  color:"text.primary",
   borderRadius: theme.shape.borderRadius,
 }));
 
@@ -50,7 +51,7 @@ const UserBox = styled(Box)(({ theme }) => ({
 
 }));
 
-const Navbar = () => {
+const Navbar = ({mode}) => {
 
   const [open, setOpen] = useState(false);
   return (
@@ -60,8 +61,8 @@ const Navbar = () => {
           RAJ
         </Typography>
         <AcUnitIcon sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search>
-          <InputBase placeholder="Search..." />
+        <Search color={"text.primary"}>
+          <InputBase placeholder="Search..."   />
         </Search>
         <Icons>
           <Badge color="error" badgeContent={4}>

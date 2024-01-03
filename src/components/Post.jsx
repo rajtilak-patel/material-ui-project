@@ -1,10 +1,10 @@
 import React from 'react'
 import { Favorite, MoreVert, Share } from '@mui/icons-material'
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material'
-const Post = () => {
+const Post = ({title , image}) => {
   return (
     <>
-    <Card sx={{margin:5}} >
+    <Card sx={{margin:5}} elevation={3} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -16,13 +16,13 @@ const Post = () => {
             <MoreVert />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={title}
+        subheader="january 1, 2024"
       />
       <CardMedia
         component="img"
         height="20%"
-        image="https://images.unsplash.com/photo-1619441207978-3d326c46e2c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D"
+        image={image}
         alt="Paella dish"
       />
       <CardContent>
